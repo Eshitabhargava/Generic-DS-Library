@@ -5,7 +5,7 @@ void BubbleSort(void *collection,int collLen,int elemSize,int (*p2f)(void *,void
 {
 int i,j,k,weight;
 void *temp;
-void *left,void *right;
+void *left,*right;
 temp=malloc(elemSize);
 k=collLen-1;
 while(k>=0)
@@ -14,8 +14,8 @@ i=0;
 j=1;
 while(j<k)
 {
-left=coll+(i*elemSize);
-right=coll+(j*elemSize);
+left=collection+(i*elemSize);
+right=collection+(j*elemSize);
 weight=p2f(left,right);
 if(weight>0)
 {
