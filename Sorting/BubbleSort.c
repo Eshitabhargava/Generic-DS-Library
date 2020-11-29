@@ -2,7 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 
-void BubbleSort(void *collection,int collLen,int elemSize,int (*p2f)(void *,void *))
+void bubbleSort(void *collection,int collLen,int elemSize,int (*p2f)(void *,void *))
 {
 int i,j,k,weight;
 void *temp;
@@ -13,7 +13,7 @@ while(k>=0)
 {
 i=0;
 j=1;
-while(j<k)
+while(i<=k)
 {
 left=collection+(i*elemSize);
 right=collection+(j*elemSize);
